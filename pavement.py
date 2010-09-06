@@ -3,14 +3,14 @@ from paver.easy import *
 
 @task
 def build():
-    """Bootstrap's and init's buildout."""
+    """Bootstraps and inits buildout."""
     sh('python bootstrap.py -d')
     sh('./bin/buildout')
 
 
 @task
 def clean():
-    """Clean's up working directory from buildout staff."""
+    """Cleans up working directory from buildout staff."""
     path('bin').rmtree()
     path('develop-eggs').rmtree()
     path('dist').rmtree()
